@@ -1,3 +1,6 @@
+create database flightbook;
+use flightbook;
+
 create table flight(flight_number int NOT NULL,flight_trip_id int,no_of_seats int,
  PRIMARY KEY (flight_number),flight_name varchar(32)
  );   --flight_table
@@ -8,25 +11,39 @@ no_of_seats int,flight_number int NOT
 NULL);    --flight_trips table
 
 INSERT INTO flight
-VALUES (1,1,100,'Air India');
+VALUES (1,1,100,'AirIndia1');
 INSERT INTO flight
-VALUES (2,1,100,'Indigo');
+VALUES (2,1,100,'AirIndia2');
 INSERT INTO flight
-VALUES (1,2,100,'Air India');
+VALUES (1,2,100,'AirIndia1');
 INSERT INTO flight
-VALUES (2,2,100,'Indigo');
+VALUES (2,2,100,'AirIndia2');
 INSERT INTO flight
-VALUES (1,1,100,'Emirates');
+VALUES (3,1,100,'AirIndia3');
 INSERT INTO flight
-VALUES (1,1,100,'Vistara');
+VALUES (4,1,100,'AirIndia4');
 INSERT INTO flight
-VALUES (1,1,100,'Spice-jet');
+VALUES (5,1,100,'AirIndia5');
 INSERT INTO flight
-VALUES (1,1,100,'Deccan');
+VALUES (3,2,100,'AirIndia3');
 INSERT INTO flight
-VALUES (1,2,100,'Emirates');
+VALUES (4,2,100,'AirIndia4');
 INSERT INTO flight
-VALUES (1,2,100,'Spice-jet');
+VALUES (5,2,100,'AirIndia5'); 
+
+
+
+INSERT INTO flight_trips
+VALUES (1,'Delhi','Chennai','13-09-2022 09:45:00','13-09-2022 16:00:00',100,1);
+INSERT INTO flight_trips
+VALUES (1,'Hyderabad','Vijayawada','09-10-2022 01:30:00','09-09-2022 06:00:00',100,2);
+INSERT INTO flight_trips
+VALUES (1,'Delhi','Amritsar','16-09-2022 10:45:00','10-09-2022 16:00:00',100,3);
+INSERT INTO flight_trips
+VALUES (2,'mumbai','Amritsar','16-09-2022 10:45:00','10-09-2022 16:00:00',100,1);
+INSERT INTO flight_trips
+VALUES (1,'pune','Bangalore','16-09-2022 10:45:00','10-09-2022 16:00:00',100,4);
+
 
 
 
